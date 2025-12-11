@@ -1,7 +1,6 @@
 package ir.intellij.secureblogmanagement.controller;
 
 import ir.intellij.secureblogmanagement.dto.UserDtoRequest;
-import ir.intellij.secureblogmanagement.model.Post;
 import ir.intellij.secureblogmanagement.model.Role;
 import ir.intellij.secureblogmanagement.model.User;
 import ir.intellij.secureblogmanagement.service.UserService;
