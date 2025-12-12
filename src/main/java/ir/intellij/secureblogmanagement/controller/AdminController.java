@@ -16,4 +16,11 @@ public class AdminController {
     public String publicApi() {
         return "public API";
     }
+
+    @GetMapping("/author")
+    @PreAuthorize("hasRole('AUTHOR')")
+    public String author() {
+        return "you are author";
+    }
+
 }

@@ -62,13 +62,14 @@ public class JwtUtil {
 //    }
 
     private boolean isTokenExpired(String token) {
-        Date expirationTime = Jwts.parser()
+        Date expiration = Jwts.parser()
+                .setSigningKey(SECRET_KEY.getBytes())
                 .build()
                 .parseClaimsJws(token)
                 .getBody()
                 .getExpiration();
 
-        return expirationTime.before(new Date());
+        return expiration.before(new Date());
     }
 
 
